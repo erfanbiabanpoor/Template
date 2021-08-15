@@ -11,15 +11,26 @@ body{
     margin: 0;
     font-size: 14px;
     background: #F7FAFF;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar content";
 }
-
-.sidebar{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 270px;
-    padding-bottom: 50px;
+.main{
+    width: 100%;
+    padding-top: 0px !important;
+    transition: .5s;
     position: relative;
+    min-height: 100vh;
+    padding-bottom: 160px;
+    box-sizing: border-box;
+}
+.sidebar{
+
+    height: 100%;
+    grid-area: "sidebar / sidebar";
 }
 .logo{
     margin: 30px;
@@ -42,9 +53,7 @@ body{
     text-align: left;
     box-sizing: border-box;
     padding: 0%;
-
 }
-
 .dashboard{
     font-size: 15px;
     font-weight: bold;
@@ -64,6 +73,7 @@ body{
 .sublist{
    padding:0px 0px 0px 70px;
    margin: 0;
+   
    list-style-type: none;
    font-size: 14px;
    font-weight: 400;
@@ -172,22 +182,11 @@ body{
     background: transparent;
     font-weight: bold;
 }
-.main{
-    padding-left: 270px;
-    width: 100%;
-    padding-top: 0px !important;
-    transition: .5s;
-    position: relative;
-    min-height: 100vh;
-    padding-bottom: 160px;
-    box-sizing: border-box;
-}
 .header{
     padding-right: 15px;
     width: 100vh;
     box-sizing: border-box;
-    display: flex;
-   flex-direction: row;
+    display: grid;
    background-color: #fff;
    position: fixed;
    top: 0;
@@ -209,7 +208,6 @@ body{
     position: relative;
     box-sizing: border-box;
     font-size: 14px;
-
 }
 input{
     color: #000;
@@ -248,7 +246,6 @@ button{
     padding-left: 40px;
     padding-right: 11px;
 }
-
 .msg{
     margin-right: 50px;
     margin-left: 40px;
@@ -337,7 +334,6 @@ button{
     transition: 0.5s;
     padding: 41px 30px;
     position: relative;
-
 }
 .TE{
     font-size: 17px;
@@ -356,8 +352,7 @@ button{
     -webkit-transition: 0.5s;
     transition: 0.5s;
     color: #fff;
-    margin-bottom: 7px;
-    
+    margin-bottom: 7px;  
 }
 .S2{
     -webkit-transition: 0.5s;
@@ -391,8 +386,7 @@ button{
     -webkit-transition: 0.5s;
     transition: 0.5s;
     color: #fff;
-    margin-bottom: 7px;
-    
+    margin-bottom: 7px;  
 }
 .S3{
     -webkit-transition: 0.5s;
@@ -426,8 +420,7 @@ button{
     -webkit-transition: 0.5s;
     transition: 0.5s;
     color: #fff;
-    margin-bottom: 7px;
-    
+    margin-bottom: 7px;   
 }
 .S4{
     -webkit-transition: 0.5s;
@@ -437,8 +430,8 @@ button{
     color: #fff;
 }
 .left{
-    -ms-flex: 0 50%;
-    flex: 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
     height: calc(100% - 30px);
     position: relative;
@@ -454,7 +447,6 @@ button{
     margin-bottom: 25px;
     align-items: center;
     box-sizing: border-box;
-    display:flex;
 }
 .AP{
     font-family: "Muli", sans-serif;
@@ -465,7 +457,6 @@ button{
     display: flex;
     flex-direction: column;
 }
-
 .A{
     font-size: 12px;
     font-weight: 400;
@@ -490,8 +481,7 @@ button{
     line-height: 31px;
     font-size: 12px;
     text-transform: capitalize;
-    margin-right: 5px;
-    
+    margin-right: 5px; 
 }
 .L{
     border: 0;
@@ -508,5 +498,44 @@ button{
     line-height: 31px;
     font-size: 12px;
     text-transform: capitalize;
-    
+}
+.income{
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    height: calc(100% - 30px);
+    position: relative;
+    box-sizing: border-box;
+}
+.IB{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-items: center;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #4D4F5C;
+    line-height: 1.2;
+}
+.expenses{
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+.EB{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-items: center;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #4D4F5C;
+    line-height: 1.2;
 }
