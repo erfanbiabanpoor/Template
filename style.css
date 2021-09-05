@@ -413,9 +413,6 @@ input{
     grid-area: income;
 }
 
-.expenses{
-    
-}
 .text{
     display: flex ;
     flex-direction: row;
