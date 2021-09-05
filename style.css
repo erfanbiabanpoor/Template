@@ -18,8 +18,8 @@ body{
     padding-top: 0px ;
     padding-bottom: 160px;
     display: grid;
-    grid-template-columns: 20vw 80vw;
-    grid-template-rows: 190px 1fr;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 190px 580px;
     grid-template-areas: 
     "sidebar header"
     "sidebar content";
@@ -39,7 +39,9 @@ body{
     list-style: none;
     text-align: left;
     padding: 0%;
-    color: #676B84;}
+    color: #676B84;
+    padding-left: 25px;
+}
 .dashboard{
     font-size: 15px;
     font-weight: bold;
@@ -167,29 +169,25 @@ input{
 }
 .content{
     margin: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr ;
-    grid-template-areas: 
-    "box box"
-    "left right";
+    grid-area: content;
+
 }
 .box{
-    grid-area: box;
     max-width: 100%;
     position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
     margin-bottom: 50px;
 }
 .Dblue{
     background-color: #fff;
     border-radius: 10px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    padding: 41px 30px 41px 30px;
+    padding: 41px 30px;
     position: relative;
     background: #3B76EF;
     
@@ -336,13 +334,7 @@ input{
     border-radius: 7px;
     grid-area: left;
 }
-.text{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    align-items: center;
-}
+
 .AP{
     font-family: "Muli", sans-serif;
     font-weight: 700;
@@ -354,8 +346,7 @@ input{
     font-weight: 400;
     color: #A3A0FB;
     margin-top: 6px;
-    display: flex;
-    flex-direction: column;
+
 }
 .M{
     border: 0;
@@ -382,13 +373,12 @@ input{
     height: 32px;
     line-height: 31px;
     font-size: 12px;
-    text-transform: capitalize;
 }
 
 .IB{
-    display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     align-items: center;
     font-family: "Muli", sans-serif;
     font-weight: 700;
@@ -398,9 +388,9 @@ input{
 }
 
 .EB{
-    display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     align-items: center;
     font-family: "Muli", sans-serif;
     font-weight: 700;
@@ -408,6 +398,33 @@ input{
     color: #4D4F5C;
     line-height: 1.2;
 }
+.down{
+    display: grid;
+    grid-template-areas:
+    "left right";
+}
+
 .right{
-grid-area: right;
+    grid-area: right;
+    display: flex;
+    flex-direction: row;
+}
+.income{
+    grid-area: income;
+}
+
+.expenses{
+    
+}
+.text{
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 650px;
+}
+.ML{
+    display: flex;
 }
