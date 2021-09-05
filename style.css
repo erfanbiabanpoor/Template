@@ -19,7 +19,7 @@ body{
     padding-bottom: 160px;
     display: grid;
     grid-template-columns: 20vw 80vw;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 190px 1fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar content";
@@ -123,8 +123,6 @@ body{
     display: flex;
     grid-area: header;
     background-color: #fff;
-    top: 0;
-    padding: 30px ;
     border-radius: 7px;
     align-items: center;
     justify-content: space-between;
@@ -156,34 +154,34 @@ input{
 }
 .avatar{
 
-    position: relative;
     max-width: 77px;
     max-height: 77px;
     border-radius: 50%;
     border: 2px solid #A5ADC6;
-    cursor: pointer;
 }
 .profile{
     align-items: center;
     justify-content: space-between;
     display: flex;
-    box-sizing: border-box;
 
 }
 .content{
     margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+    "box box"
+    "left right";
 }
 .box{
-    flex: 0 0 100%;
+    grid-area: box;
     max-width: 100%;
     position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
     margin-bottom: 50px;
 }
 .Dblue{
@@ -336,39 +334,32 @@ input{
     padding: 30px;
     background-color: rgba(247, 250, 255, 0.7);
     border-radius: 7px;
+    grid-area: left;
 }
 .text{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 25px;
     align-items: center;
-    box-sizing: border-box;
 }
 .AP{
     font-family: "Muli", sans-serif;
     font-weight: 700;
     font-size: 20px;
     color: #4D4F5C;
-    line-height: 1.2;
-    display: flex;
-    flex-direction: column;
 }
 .A{
     font-size: 12px;
     font-weight: 400;
     color: #A3A0FB;
-    display: block;
     margin-top: 6px;
     display: flex;
     flex-direction: column;
 }
 .M{
     border: 0;
-    border-radius: 0px;
-    padding-left: 0;
-    padding-right: 30px;
     color: #415094;
-    background: transparent;
     border: 1px solid #EAF0F4;
     padding-left: 25px;
     padding-right: 47px;
@@ -376,8 +367,6 @@ input{
     height: 32px;
     line-height: 31px;
     font-size: 12px;
-    text-transform: capitalize;
-    margin-right: 5px; 
 }
 .L{
     border: 0;
@@ -420,5 +409,5 @@ input{
     line-height: 1.2;
 }
 .right{
-    display: flex;
+grid-area: right;
 }
